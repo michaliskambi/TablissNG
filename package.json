@@ -1,6 +1,6 @@
 {
-  "name": "tablissng",
-  "version": "1.5.1",
+  "name": "tablissng-michalis",
+  "version": "1.5.1-michalis",
   "description": "A beautiful, customizable New Tab page. This is an actively maintained fork of the original Tabliss project.",
   "license": "GPL-3.0",
   "private": true,
@@ -9,6 +9,10 @@
     "url": "https://github.com/BookCatKid"
   },
   "contributors": [
+    {
+      "name": "Michalis",
+      "url": "https://github.com/michalis"
+    },
     {
       "name": "Joel Shepherd",
       "url": "https://github.com/joelshepherd"

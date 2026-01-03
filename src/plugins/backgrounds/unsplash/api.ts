@@ -51,6 +51,11 @@ export const fetchImages = async ({
 
 
   if (res.status != 200) {
+    console.error("Error fetching images from external API.\n" +
+      "Response code: " + res.status + "\n" +
+      "Response body: ", body);
+    // In case of Unsplash, errors are in body.errors.
+
     const empty: Image[] = [
       {
         src: "",

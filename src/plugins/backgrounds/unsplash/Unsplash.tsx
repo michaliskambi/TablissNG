@@ -52,6 +52,10 @@ const Unsplash: React.FC<Props> = ({
     }
   }, [cache]);
 
+  if (item?.src === "") {
+    console.error("Did not fetch image from Unsplash. Possible reason: Look above for auth errors from Unsplash.");
+    return null;
+  }
   const url = item ? buildLink(item.src) : null;
 
   const go = (amount: number) =>

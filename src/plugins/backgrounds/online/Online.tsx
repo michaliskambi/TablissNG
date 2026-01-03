@@ -23,10 +23,17 @@ setTimeout(keepRefreshingPage, timeout);
 const Online: React.FC<Props> = ({ data = defaultData }) => {
   if (!data.url) return <div className="Online default fullscreen" />;
 
+  let url = data.url;
+  // append random number to url to bypass browser cache
+  url += (url.includes("?") ? "&" : "?") +
+    "random_to_avoid_browser_cache=" + Math.floor(Math.random() * 1000 * 1000);
+
+  console.log("Online background from: " + url);
+
   return (
     <Backdrop
       className="Online fullscreen"
-      url={data.url}
+      url={url}
     />
   );
 };

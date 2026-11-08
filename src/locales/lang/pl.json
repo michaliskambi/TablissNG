@@ -305,7 +305,7 @@
   "plugins.timeTracker.eventNamePlaceholder": "Nazwa wydarzenia",
   "plugins.timeTracker.hour": "godz.",
   "plugins.timeTracker.hours": "godz.",
-  "plugins.timeTracker.isIn": "nadejdzie",
+  "plugins.timeTracker.isIn": "",
   "plugins.timeTracker.italicizeTime": "Czas kursywą",
   "plugins.timeTracker.minute": "min",
   "plugins.timeTracker.minutes": "min",

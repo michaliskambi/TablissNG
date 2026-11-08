@@ -49,6 +49,7 @@ const TimeTracker: FC<Props> = ({ data = defaultData }) => {
 
   const renderDetailedTime = () => {
     const { days, hours, minutes, seconds } = timeComponents;
+    const showSeconds = false;
 
     return (
       <div className="time-components">
@@ -72,12 +73,16 @@ const TimeTracker: FC<Props> = ({ data = defaultData }) => {
             <FormattedMessage {...(minutes === 1 ? messages.minute : messages.minutes)} />
           </span>
         </span>
-        <span className="time-component">
-          <span className="value">{seconds}</span>
-          <span className={`unit ${data.italicizeTime ? "italic-time" : ""}`}>
-            <FormattedMessage {...(seconds === 1 ? messages.second : messages.seconds)} />
+        {/* Seconds hidden in this fork: they make the countdown distracting.
+            Change showSeconds to true to show them again. */}
+        {showSeconds && (
+          <span className="time-component">
+            <span className="value">{seconds}</span>
+            <span className={`unit ${data.italicizeTime ? "italic-time" : ""}`}>
+              <FormattedMessage {...(seconds === 1 ? messages.second : messages.seconds)} />
+            </span>
           </span>
-        </span>
+        )}
       </div>
     );
   };
